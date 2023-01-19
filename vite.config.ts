@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
       host: true,
       port: 3000,
     },
-    base: 'test-vue3-router',
+    base: '/test-vue3-router/',
     build: {
       outDir: 'dist',
     },
