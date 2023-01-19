@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue + TS</title>
+  </head>
+  <body>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      function handleCredentialResponse(response) {
+        localStorage.setItem('token', response.credential)
+        console.log('Encoded JWT ID token: ' + response.credential)
+        console.log(response)
+        // if (localStorage.getItem('token')) {
+        //   location.reload()
+        // }
+      }
+      // window.onload = function () {
+      //   google.accounts.id.initialize({
+      //     client_id:
+      //       '286226883840-9g8rlp9115ebrb9gmd0r56osqr2ttfm6.apps.googleusercontent.com',
+      //     callback: handleCredentialResponse,
+      //   })
+      //   // google.accounts.id.renderButton(
+      //   //   document.getElementById('buttonDiv'),
+      //   //   { theme: 'outline', size: 'large' } // customization attributes
+      //   // )
+      //   google.accounts.id.prompt() // also display the One Tap dialog
+      // }
+    </script>
+    <!-- <div id="buttonDiv"></div> -->
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
